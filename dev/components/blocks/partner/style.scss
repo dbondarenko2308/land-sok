@@ -1,0 +1,53 @@
+.partner {
+  background: #f5f6f8;
+
+
+  &__inner {
+    padding: 128px 0;
+
+
+    @media only screen and (max-width: 991px) {
+      padding: 64px 0;
+    }
+  }
+
+
+  &__title {
+    background: #fff;
+    color: #202020;
+  }
+
+
+  &__items {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 20px;
+
+
+    @media only screen and (max-width: 991px) {
+      display: flex;
+      grid-gap: 0;
+    }
+  }
+
+  &__container {
+    @media only screen and (max-width: 991px) {
+      padding-bottom: 28px;
+    }
+  }
+
+
+  &__item {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    border-radius: 15px;
+
+
+    @media only screen and (max-width: 991px) {
+      height: 81px;
+    }
+  }
+}

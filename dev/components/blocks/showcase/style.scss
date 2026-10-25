@@ -1,0 +1,62 @@
+.showcase {
+  margin-bottom: 48px;
+
+  @media only screen and (max-width: 991px) {
+    margin-bottom: 32px;
+  }
+
+  &__inner {
+    background: url('../images/showcase-bg.png') 50% 50% no-repeat;
+    min-height: 542px;
+    border-radius: 32px;
+    padding: 52px;
+    background-size: cover;
+
+
+    @media only screen and (max-width: 991px) {
+      padding: 32px 16px;
+      border-radius: 20px;
+    }
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 68px;
+
+    @media only screen and (max-width: 991px) {
+      margin-bottom: 112px;
+    }
+  }
+
+  &__title {
+    font-size: 48px;
+    font-weight: 700;
+    color: #fff;
+    max-width: 734px;
+    line-height: 120%;
+    margin-bottom: 30px;
+
+    @media only screen and (max-width: 991px) {
+      font-size: 32px;
+      margin-bottom: 24px;
+    }
+  }
+
+  &__text {
+    font-size: 16px;
+    color: #fff;
+    max-width: 650px;
+    margin-bottom: 30px;
+
+    @media only screen and (max-width: 991px) {
+      margin-bottom: 32px;
+    }
+  }
+
+  &__btn {
+    @media only screen and (max-width: 991px) {
+      width: 100%;
+    }
+  }
+}

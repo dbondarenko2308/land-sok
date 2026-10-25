@@ -1,0 +1,225 @@
+@use '../../style/scss/variables.scss' as *;
+
+.header {
+  width: 100%;
+  background: var(--White, #fff);
+  box-shadow: 0 4px 23.5px 0 rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  margin-bottom: 30px;
+  z-index: 101;
+
+  &__inner {
+    padding: 24px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @media only screen and (max-width: 991px) {
+      padding: 12px 0;
+    }
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    margin-right: 40px;
+
+    @media only screen and (max-width: 1300px) {
+      margin-right: 10px;
+      height: 40px;
+    }
+
+    @media only screen and (max-width: 991px) {
+      height: 37px;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    @media only screen and (max-width: 991px) {
+      display: none;
+    }
+
+    @media only screen and (max-width: 1300px) {
+      font-size: 14px;
+      gap: 10px;
+    }
+
+    li {
+      a {
+        &:hover {
+          color: $primary;
+        }
+      }
+    }
+  }
+
+  &__left {
+    display: flex;
+    align-items: center;
+  }
+
+  &__right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    @media only screen and (max-width: 1300px) {
+      gap: 10px;
+    }
+
+    @media only screen and (max-width: 991px) {
+      display: none;
+    }
+  }
+
+  &__number {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    color: $primary;
+
+    @media only screen and (max-width: 1300px) {
+      font-size: 14px;
+    }
+
+    &:hover {
+      color: $primaryDark;
+    }
+  }
+
+  &__mob {
+    display: none;
+
+    @media only screen and (max-width: 991px) {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__phone {
+    display: flex;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background: var(--Gray-Light, #f5f6f8);
+    justify-content: center;
+  }
+
+  &__burger {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background: $primary;
+    margin-left: 12px;
+    transition: 300ms;
+
+    &.active {
+      span {
+        height: 0;
+
+        &::before {
+          transform: rotate(-45deg) translate(-2px, 4px);
+        }
+
+        &::after {
+          transform: rotate(45deg) translate(-2px, -3px);
+        }
+      }
+    }
+
+    span {
+      width: 16px;
+      height: 2px;
+      background: #fff;
+      border-radius: 10px;
+      position: relative;
+
+      &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: -5px;
+        width: 16px;
+        height: 2px;
+        border-radius: 10px;
+        transition: 300ms;
+        background: #fff;
+      }
+
+      &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: -5px;
+        width: 16px;
+        height: 2px;
+        border-radius: 10px;
+        transition: 300ms;
+        background: #fff;
+      }
+    }
+  }
+
+  &-mob {
+    position: fixed;
+    top: 64px;
+    left: 0;
+    right: 0;
+    height: calc(100vh - 65px);
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 16px;
+    background: #fff;
+    display: none;
+    overflow: auto;
+
+    &.active {
+      display: flex;
+    }
+
+    .header__nav {
+      flex-direction: column;
+      display: flex;
+      align-items: flex-start;
+
+      gap: 20px;
+      font-size: 16px;
+    }
+
+    &__foot {
+      width: 100%;
+    }
+  }
+
+  &__image {
+    display: flex;
+    align-items: center;
+  }
+
+  &__link {
+    display: flex;
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    color: $primary;
+  }
+
+  &__btn {
+    @media only screen and (max-width: 991px) {
+      width: 100%;
+      margin-top: 32px;
+    }
+  }
+}

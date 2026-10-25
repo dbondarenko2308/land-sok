@@ -1,0 +1,97 @@
+.company {
+  margin-bottom: 128px;
+
+  @media only screen and (max-width: 991px) {
+    margin-bottom: 64px;
+  }
+
+  &__inner {
+    background: url('../images/company-bg.png') 50% 50% no-repeat;
+    min-height: 613px;
+    border-radius: 32px;
+    padding: 52px;
+    background-size: cover;
+
+    @media only screen and (max-width: 991px) {
+      padding: 32px 16px;
+      border-radius: 20px;
+      min-height: initial;
+    }
+  }
+
+
+
+  &__title {
+    color: #202020;
+  }
+
+  &__desc {
+    color: #fff;
+    max-width: 600px;
+    margin-bottom: 24px;
+  }
+
+
+  &__text {
+    color: #fff;
+    max-width: 600px;
+    margin-bottom: 80px;
+
+
+    @media only screen and (max-width: 991px) {
+      
+      margin-bottom: 64px;
+    }
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 16px;
+
+    @media only screen and (max-width: 991px) {
+      display: flex;
+      grid-gap: 0;
+
+    }
+
+
+  }
+
+  &__container {
+    @media only screen and (max-width: 991px) {
+      padding-bottom: 28px;
+
+      .swiper-pagination {
+
+        &-bullet {
+          border: 1px solid #fff;
+
+          &-active {
+            background: #fff;
+          }
+        }
+      }
+    }
+  }
+
+  &__item {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    height: auto;
+
+
+    span {
+      font-size: 20px;
+      color: #0060AA;
+      font-weight: 700;
+      display: block;
+      margin-bottom: 12px;
+
+      @media only screen and (max-width: 991px) {
+        font-size: 18px;
+      }
+    }
+  }
+}

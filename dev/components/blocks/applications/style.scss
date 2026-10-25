@@ -1,0 +1,120 @@
+.applications {
+  margin-bottom: 128px;
+
+  @media only screen and (max-width: 991px) {
+    margin-bottom: 64px;
+  }
+  &__items {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 40px;
+
+
+    @media only screen and (max-width: 991px) {
+      grid-template-columns: 1fr;
+      grid-gap: 20px;
+    }
+  }
+
+  &__item {
+    position: relative;
+
+    border-radius: 16px;
+    background: #f5f6f8;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+
+
+    @media only screen and (max-width: 991px) {
+      padding: 16px;
+    }
+  }
+
+  &__text {
+    flex-grow: 10;
+    max-width: 371px;
+    position: relative;
+    z-index: 10;
+    margin-bottom: 50px;
+
+    @media only screen and (max-width: 991px) {
+      margin-bottom: 128px;
+    }
+  }
+
+  &__img {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+
+    @media only screen and (max-width: 1300px) {
+      right: -20%;
+    }
+
+    @media only screen and (max-width: 991px) {
+      height: 187px;
+      right: -14%;
+      bottom: -20px;
+    }
+  }
+
+  &__labels {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    margin-bottom: 24px;
+    position: relative;
+    z-index: 10;
+    flex-wrap: wrap;
+  }
+
+  &__label {
+    font-size: 16px;
+    color: #202020;
+
+    position: relative;
+    padding: 4px 12px 4px 25px;
+    font-weight: 400;
+    border-radius: 30px;
+    background: #fff;
+    width: fit-content;
+
+    @media only screen and (max-width: 991px) {
+      font-size: 16px;
+    }
+
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 5px;
+      height: 5px;
+      background: url('/images/before-title.svg') no-repeat 50% 50%;
+      left: 12px;
+      border-radius: 50%;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  &__name {
+    color: var(--Black, #202020);
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 120%;
+    margin-bottom: 16px;
+
+
+    @media only screen and (max-width: 991px) {
+      font-size: 20px;
+      margin-bottom: 12px;
+    }
+  }
+
+  &__btn {
+    position: relative;
+    z-index: 1;
+  }
+}
