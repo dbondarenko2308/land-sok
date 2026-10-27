@@ -1,0 +1,132 @@
+.solution {
+  margin: 128px 0;
+
+  @media only screen and (max-width: 991px) {
+    margin: 64px 0;
+  }
+
+  &__top {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 52px;
+
+    @media only screen and (max-width: 991px) {
+      display: block;
+      margin-bottom: 32px;
+    }
+  }
+
+  &__btn {
+    @media only screen and (max-width: 991px) {
+      width: 100%;
+    }
+  }
+
+  &__desc {
+    margin-bottom: 0;
+    max-width: 685px;
+  }
+
+  &__hidden {
+    overflow: auto;
+
+    @media only screen and (max-width: 991px) {
+      margin: 0 -16px;
+      padding: 0 16px;
+      padding-bottom: 20px;
+      margin-bottom: 24px;
+
+      &::-webkit-scrollbar {
+        background: #f5f6f8;
+        height: 5px;
+        border-radius: 20px;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background: #0060aa;
+        height: 5px;
+        border-radius: 20px;
+      }
+    }
+  }
+
+  &__banner {
+    display: flex;
+    align-items: center;
+    margin-bottom: 52px;
+
+    @media only screen and (max-width: 991px) {
+      width: 1018px;
+      height: 382px;
+      margin-bottom: 0;
+    }
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 20px;
+
+    @media only screen and (max-width: 1300px) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @media only screen and (max-width: 991px) {
+      display: flex;
+      grid-gap: 0;
+    }
+  }
+
+  &__container {
+    padding-bottom: 28px;
+  }
+
+  &__item {
+    padding: 24px;
+    border-radius: 12px;
+    background: #f5f6f8;
+    display: flex;
+    flex-direction: column;
+
+    @media only screen and (max-width: 991px) {
+      padding: 16px 28px 16px 16px;
+      height: auto;
+    }
+  }
+
+  &__head {
+    flex-grow: 10;
+
+    span {
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 700;
+      display: block;
+      margin-bottom: 16px;
+      color: #0060aa;
+      line-height: 120%;
+
+      @media only screen and (max-width: 991px) {
+        font-size: 20px;
+        margin-bottom: 12px;
+      }
+    }
+  }
+
+  &__img {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-bottom: -24px;
+    margin-right: -24px;
+
+
+    @media only screen and (max-width: 991px) {
+      margin-right: -28px;
+      margin-bottom: -16px;
+     width: 50%;
+     margin-left: auto;
+    }
+  }
+}

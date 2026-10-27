@@ -59,13 +59,10 @@ $(document).ready(function() {
 
 	const swipers = [
 		{
-			init: false,
 			instance: null,
 			selector: '.showcase-list__container',
-
 			options: {
 				slidesPerView: 1,
-
 				spaceBetween: 16,
 				pagination: {
 					el: '.swiper-pagination',
@@ -75,15 +72,11 @@ $(document).ready(function() {
 			},
 			breakpoint: 992
 		},
-
 		{
-			init: false,
 			instance: null,
 			selector: '.object__container',
-
 			options: {
 				slidesPerView: 1,
-
 				spaceBetween: 16,
 				pagination: {
 					el: '.swiper-pagination',
@@ -93,15 +86,11 @@ $(document).ready(function() {
 			},
 			breakpoint: 992
 		},
-
 		{
-			init: false,
 			instance: null,
 			selector: '.company__container',
-
 			options: {
 				slidesPerView: 1,
-
 				spaceBetween: 16,
 				pagination: {
 					el: '.swiper-pagination',
@@ -112,20 +101,44 @@ $(document).ready(function() {
 			breakpoint: 992
 		},
 		{
-			init: false,
 			instance: null,
-			selector: '.partner__container',
-
+			selector: '.our__container',
 			options: {
 				slidesPerView: 1,
-
+				spaceBetween: 16,
+				pagination: {
+					el: '.swiper-pagination',
+					type: 'bullets',
+					clickable: true
+				}
+			},
+			breakpoint: 992
+		},
+		{
+			instance: null,
+			selector: '.solution__container',
+			options: {
+				slidesPerView: 1,
+				spaceBetween: 16,
+				pagination: {
+					el: '.swiper-pagination',
+					type: 'bullets',
+					clickable: true
+				}
+			},
+			breakpoint: 992
+		},
+		{
+			instance: null,
+			selector: '.partner__container',
+			options: {
+				slidesPerView: 1,
 				spaceBetween: 16,
 				pagination: {
 					el: '.swiper-pagination',
 					type: 'bullets',
 					clickable: true
 				},
-
 				breakpoints: {
 					767: {
 						slidesPerView: 2
@@ -139,17 +152,17 @@ $(document).ready(function() {
 	function handleSwipers() {
 		swipers.forEach(item => {
 			const shouldInit = window.innerWidth < item.breakpoint
+			const element = document.querySelector(item.selector)
+
+			if (!element) return
 
 			if (shouldInit) {
-				if (!item.instance) {
-					item.instance = new Swiper(item.selector, item.options)
+				if (!item.instance || item.instance.destroyed) {
+					item.instance = new Swiper(element, item.options)
 				}
 			} else {
-				if (item.instance) {
-					if (typeof item.instance.destroy === 'function') {
-						item.instance.destroy()
-					}
-
+				if (item.instance && !item.instance.destroyed) {
+					item.instance.destroy(true, true)
 					item.instance = null
 				}
 			}
@@ -176,7 +189,7 @@ $(document).ready(function() {
 		if ($(target).length) {
 			$('html, body').animate(
 				{
-					scrollTop: $(target).offset().top - 50
+					scrollTop: $(target).offset().top - 120
 				},
 				700
 			)
@@ -238,6 +251,27 @@ $(document).ready(function() {
 	})
 
 	$(window).trigger('scroll')
+
+	$(window).on('load', function() {
+		$('.solution__hidden').each(function() {
+			this.scrollLeft = (this.scrollWidth - this.clientWidth) / 2
+		})
+	})
+
+	$('.faq__head').on('click', function() {
+		const item = $(this).closest('.faq__item')
+		const body = item.find('.faq__body')
+
+		item.toggleClass('active')
+		body.stop().slideToggle(300)
+
+		item
+			.siblings('.faq__item.active')
+			.removeClass('active')
+			.find('.faq__body')
+			.stop()
+			.slideUp(300)
+	})
 })
 
 
