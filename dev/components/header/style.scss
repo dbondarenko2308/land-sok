@@ -9,6 +9,10 @@
   margin-bottom: 30px;
   z-index: 101;
 
+  @media only screen and (max-width: 991px) {
+    margin-bottom: 24px;
+  }
+
   &__inner {
     padding: 24px 0;
     display: flex;

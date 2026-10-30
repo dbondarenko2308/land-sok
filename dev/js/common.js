@@ -71,6 +71,36 @@ $(document).ready(function() {
 			},
 			breakpoint: 992
 		},
+
+			{
+			instance: null,
+			selector: '.sys-ob__container',
+			options: {
+				slidesPerView: 1,
+				spaceBetween: 16,
+				pagination: {
+					el: '.swiper-pagination',
+					type: 'bullets',
+					clickable: true
+				}
+			},
+			breakpoint: 992
+		},
+
+			{
+			instance: null,
+			selector: '.apwork__container',
+			options: {
+				slidesPerView: 1,
+				spaceBetween: 16,
+				pagination: {
+					el: '.swiper-pagination',
+					type: 'bullets',
+					clickable: true
+				}
+			},
+			breakpoint: 992
+		},
 		{
 			instance: null,
 			selector: '.object__container',

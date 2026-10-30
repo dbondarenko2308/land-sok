@@ -5,6 +5,24 @@
     margin-bottom: 64px;
   }
 
+  &-fiz {
+    .company {
+      &__inner {
+        background: url('../images/bg-company.png') 50% 50% no-repeat;
+        min-height: 613px;
+        border-radius: 32px;
+        padding: 52px;
+        background-size: cover;
+
+        @media only screen and (max-width: 991px) {
+          padding: 32px 16px;
+          border-radius: 20px;
+          min-height: initial;
+        }
+      }
+    }
+  }
+
   &__inner {
     background: url('../images/company-bg.png') 50% 50% no-repeat;
     min-height: 613px;
@@ -19,8 +37,6 @@
     }
   }
 
-
-
   &__title {
     color: #202020;
   }
@@ -31,15 +47,12 @@
     margin-bottom: 24px;
   }
 
-
   &__text {
     color: #fff;
     max-width: 600px;
     margin-bottom: 80px;
 
-
     @media only screen and (max-width: 991px) {
-      
       margin-bottom: 64px;
     }
   }
@@ -52,10 +65,7 @@
     @media only screen and (max-width: 991px) {
       display: flex;
       grid-gap: 0;
-
     }
-
-
   }
 
   &__container {
@@ -63,7 +73,6 @@
       padding-bottom: 28px;
 
       .swiper-pagination {
-
         &-bullet {
           border: 1px solid #fff;
 
@@ -81,10 +90,9 @@
     border-radius: 10px;
     height: auto;
 
-
     span {
       font-size: 20px;
-      color: #0060AA;
+      color: #0060aa;
       font-weight: 700;
       display: block;
       margin-bottom: 12px;

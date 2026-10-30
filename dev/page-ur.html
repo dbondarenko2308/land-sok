@@ -1,4 +1,9 @@
 @@include('components/header/template.html',{"title": 'Главная'})
+@@include('components/elements/breadcrumbs/template.html',{
+list: ['<a href="index.html">Главная</a>',],
+'page': 'Юридическим лицам',
+'title': false,
+})
 @@include('components/blocks/showcase/template-ur.html',{})
 @@include('components/blocks/our/template.html',{})
 @@include('components/blocks/object/template.html',{})

@@ -21,6 +21,24 @@
       }
     }
   }
+  
+
+   &-fiz {
+    .showcase {
+      &__inner {
+        background: url('../images/showcase-bg-fiz.png') 50% 50% no-repeat;
+        min-height: 542px;
+        border-radius: 32px;
+        padding: 52px;
+        background-size: cover;
+
+        @media only screen and (max-width: 991px) {
+          padding: 32px 16px;
+          border-radius: 20px;
+        }
+      }
+    }
+  }
 
   &__inner {
     background: url('../images/showcase-bg.png') 50% 50% no-repeat;
