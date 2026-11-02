@@ -35,6 +35,11 @@
     border-radius: 12px;
     background: #f5f6f8;
     padding: 20px;
+    height: auto;
+
+    @media only screen and (max-width: 991px) {
+      padding: 16px;
+    }
 
     span {
       font-weight: 700;

@@ -38,9 +38,7 @@
       margin-bottom: 24px;
 
       &::-webkit-scrollbar {
-        background: #f5f6f8;
-        height: 5px;
-        border-radius: 20px;
+        display: none;
       }
 
       &::-webkit-scrollbar-thumb {
@@ -121,12 +119,11 @@
     margin-bottom: -24px;
     margin-right: -24px;
 
-
     @media only screen and (max-width: 991px) {
       margin-right: -28px;
       margin-bottom: -16px;
-     width: 50%;
-     margin-left: auto;
+      width: 50%;
+      margin-left: auto;
     }
   }
 }

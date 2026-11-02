@@ -2,7 +2,7 @@ $(document).ready(function () {
 $(document).ready(function() {
 	$('.mask').each(function() {
 		IMask(this, {
-			mask: '+7 000 00-00-00',
+			mask: '+7 000 000-00-00',
 			lazy: true
 		})
 	})
@@ -37,7 +37,7 @@ $(document).ready(function() {
 
 			if (scrollTop > stopPoint) {
 				$button.addClass('active').css({
-					top: footerTop + 230 + 'px',
+					top: footerTop + 270 + 'px',
 					bottom: 'auto'
 				})
 			} else {
@@ -73,7 +73,7 @@ $(document).ready(function() {
 			breakpoint: 992
 		},
 
-			{
+		{
 			instance: null,
 			selector: '.sys-ob__container',
 			options: {
@@ -88,7 +88,7 @@ $(document).ready(function() {
 			breakpoint: 992
 		},
 
-			{
+		{
 			instance: null,
 			selector: '.apwork__container',
 			options: {
@@ -242,8 +242,8 @@ $(document).ready(function() {
 
 			const maxProgress = mobile ? lineRect.height : lineRect.width
 
-			const start = window.innerHeight * 0.6
-			const end = -window.innerHeight * 0.015
+			const start = window.innerHeight * 0.3
+			const end = window.innerHeight * 0.015
 
 			const progressValue = Math.max(
 				0,
@@ -302,6 +302,20 @@ $(document).ready(function() {
 			.stop()
 			.slideUp(300)
 	})
+
+	$('.our__grid').on('mouseenter click', function (e) {
+  if (e.type === 'mouseenter' && window.innerWidth <= 992) return;
+
+  const item = $(this);
+  const img = item.data('img');
+
+  item
+    .addClass('active')
+    .siblings('.our__grid')
+    .removeClass('active');
+
+  $('.our__img img').attr('src', img);
+});
 })
 
 

@@ -53,6 +53,7 @@
     background: #f5f6f8;
 
     border-radius: 12px;
+    cursor: pointer;
 
     @media only screen and (max-width: 991px) {
       padding: 16px;
@@ -78,7 +79,7 @@
     }
 
 
-    &:first-child {
+    &.active {
       background: #0060AA;
 
 

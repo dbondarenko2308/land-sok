@@ -37,6 +37,14 @@
     align-items: center;
     gap: 25px;
 
+    li {
+      a {
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
     @media only screen and (max-width: 991px) {
       gap: 12px;
       flex-direction: column;
